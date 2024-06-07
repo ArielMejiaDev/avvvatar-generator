@@ -6,7 +6,7 @@ export default function Home() {
 
   const [name, setName] = useState('');
 
-  const [type, setType] = useState('');
+  const [type, setType] = useState('character');
 
   return (
     <div className="bg-gray-200 min-h-screen">
