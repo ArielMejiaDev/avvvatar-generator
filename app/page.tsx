@@ -6,7 +6,7 @@ export default function Home() {
 
   const [name, setName] = useState('');
 
-  const [type, setType] = useState('character');
+  const [type, setType] = useState('');
 
   return (
     <div className="bg-gray-200 min-h-screen">
@@ -20,7 +20,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <Avvvatars value={name} size={64} style={type} />
+            <Avvvatars value={name} size={64} style={type === 'character' ? 'character' : 'shape'} />
           </div>
         </div>
 
