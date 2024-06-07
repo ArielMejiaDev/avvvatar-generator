@@ -12,7 +12,7 @@ export default function Home() {
     <div className="bg-gray-200 min-h-screen">
       <div className="max-w-3xl mx-auto py-6 space-y-6">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Avatar Generator</h2>
-        <div className="flex items-center space-x-12">
+        <div className="flex items-center space-x-12 bg-white p-6 rounded-lg shadow">
           <div className="w-full">
             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">Email</label>
             <div className="mt-2">
@@ -25,10 +25,10 @@ export default function Home() {
         </div>
 
         <span className="isolate inline-flex rounded-md shadow-sm">
-          <button onClick={() => setType('character')} type="button" className="relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">
+          <button onClick={() => setType('character')} type="button" className={`relative inline-flex items-center rounded-l-md ${type === 'character' ? 'bg-gray-100' : 'bg-white'} px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10`}>
             Character
           </button>
-          <button onClick={() => setType('shape')} type="button" className="relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">
+          <button onClick={() => setType('shape')} type="button" className={`relative -ml-px inline-flex items-center rounded-r-md ${type === 'shape' ? 'bg-gray-100' : 'bg-white'} px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10`}>
             Shape
           </button>
         </span>
